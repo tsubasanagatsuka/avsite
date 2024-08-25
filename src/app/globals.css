@@ -1,33 +1,117 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+/* グローバルリセットと基本設定 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  background-color: #f4efe4; /* ページ全体の背景色 */
+  color: #333;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* ヘッダーとナビゲーションのスタイリング */
+header, nav {
+  background-color: #f5f5f5;
+  padding: 1rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  background-color: #d8b0c3;
+}
+
+nav ul {
+  display: flex;
+  list-style: none; /* リストのドットを削除 */
+  padding: 0;
+}
+
+nav ul li {
+  margin-right: 20px; /* リストアイテム間のスペース */
+}
+
+nav ul li a {
+  text-decoration: none; /* リンクの下線を削除 */
+  color: #333; /* リンクの色 */
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+}
+
+/* 検索バー */
+.search-bar {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.search-bar input[type="text"] {
+  padding: 0.5rem;
+  width: 300px;
+  margin-right: 0.5rem;
+}
+
+.search-bar button {
+  padding: 0.5rem 1rem;
+}
+
+/* メインコンテンツエリアのスタイリング */
+.content-area {
+  display: flex;
+  flex-direction: column; /* 縦に並べる */
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+}
+
+.content-area > * {
+  margin-bottom: 20px; /* 各要素間の余白 */
+}
+
+.content-area main {
+  display: flex;
+  flex-wrap: wrap; /* 子要素が折り返されるように */
+  gap: 20px; /* 子要素間のギャップ */
+}
+
+.content-area main > div {
+  flex: 1;
+  min-width: 300px; /* 最小幅を設定 */
+}
+
+/* フッターのスタイリング */
+footer {
+  background-color: #333; /* フッターの背景色 */
+  color: #fff; /* フッターの文字色 */
+  text-align: center; /* テキストを中央揃え */
+  padding: 20px 0; /* 上下の余白 */
+  margin-top: 50px; /* 上部との間隔 */
+}
+
+footer a {
+  color: #fff; /* リンクの文字色 */
+  text-decoration: none; /* リンクの下線を削除 */
+  margin: 0 15px; /* リンク間の余白 */
+}
+
+footer a:hover {
+  text-decoration: underline; /* ホバー時に下線を追加 */
+}
+
+aside {
+  width: 300px; /* 横幅は適宜調整してください */
+  padding: 10px;
+  background-color: #f0f0f0; /* 背景色も適宜調整してください */
 }
