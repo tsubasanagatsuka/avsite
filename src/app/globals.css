@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 /* グローバルリセットと基本設定 */
 * {
   margin: 0;
@@ -14,7 +18,8 @@ body {
 }
 
 /* ヘッダーとナビゲーションのスタイリング */
-header, nav {
+header,
+nav {
   background-color: #f5f5f5;
   padding: 1rem;
 }
@@ -23,6 +28,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-size: 32px;
+  font-weight: bold;
 }
 
 nav {
@@ -53,7 +60,8 @@ nav ul li a {
 .search-bar {
   display: flex;
   justify-content: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 }
 
 .search-bar input[type="text"] {
@@ -64,31 +72,7 @@ nav ul li a {
 
 .search-bar button {
   padding: 0.5rem 1rem;
-}
-
-/* メインコンテンツエリアのスタイリング */
-.content-area {
-  display: flex;
-  flex-direction: column; /* 縦に並べる */
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-  background-color: #fff;
-}
-
-.content-area > * {
-  margin-bottom: 20px; /* 各要素間の余白 */
-}
-
-.content-area main {
-  display: flex;
-  flex-wrap: wrap; /* 子要素が折り返されるように */
-  gap: 20px; /* 子要素間のギャップ */
-}
-
-.content-area main > div {
-  flex: 1;
-  min-width: 300px; /* 最小幅を設定 */
+  border: solid 1px #333;
 }
 
 /* フッターのスタイリング */
